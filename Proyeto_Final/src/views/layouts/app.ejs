@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/style.css" type="Text/css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ " crossorigin="anonymous "></script>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>Sugarland</title>
+</head>
+
+<body class="secciones">
+
+    <!--MENU-->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark " style="background-color: #390144;">
+        <a class="navbar navbar-expand-lg " style="background-color: #390144" href="/">
+            <img src="img/logo.png" width="80px" alt="">
+        </a>
+        <div class="container">
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <%if (user) { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categorias">Categorias</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/servicios">Servicios</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/catalogo">Catalogo</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <%= user.email %>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+
+                                <li><a class="dropdown-item" href="/logout">Salir</a></li>
+
+                            </ul>
+                        </li>
+
+                </ul>
+                <% } else { %>
+                    <a class="btn btn-primary" href="/login">Inciar Session</a>
+                    <a class="btn btn-danger ms-lg-3" href="/registro ">Registrarse</a>
+                    <% } %>
+            </div>
+        </div>
+
+    </nav>
+    <!--FIN MENU-->
+    <div>
+        <%if (signinMessage.length>0) {%>
+            <div class="alert alert-danger">
+                <%= signinMessage %>
+            </div>
+            <% } %>
+                <%if (signupMessage.length>0) {%>
+                    <div class="alert alert-danger">
+                        <%= signupMessage %>
+                    </div>
+                    <% } %>
+
+                        <%- body %>
+    </div>
+
+
+</body>
+<footer class="text-center text-white" style="background-color:  #390144;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-link btn-floating btn-lg text-white m-1" href="https://www.facebook.com/" role="button" data-mdb-ripple-color=" while"><i class="fab fa-facebook-f"></i
+    ></a>
+
+            <!-- Phone -->
+            <a class="btn btn-link btn-floating btn-lg text-white m-1" role="button" data-mdb-ripple-color="while"><i class="fab fa-whatsapp"></i></i
+    >  555-223-2453</a>
+
+            <!-- Google -->
+            <a class="btn btn-link btn-floating btn-lg text-white m-1" href="/servicios" role="button" data-mdb-ripple-color="white"><i class="fab fa-google"></i
+    ></a>
+
+            <!-- Github -->
+            <a class="btn btn-link btn-floating btn-lg text-white m-1" href="https://github.com/MayQuintana/Proyecto_Final_Pasteleria" role="button" data-mdb-ripple-color="while"><i class="fab fa-github"></i
+    ></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="#">Sugarland Pastry</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+</html>

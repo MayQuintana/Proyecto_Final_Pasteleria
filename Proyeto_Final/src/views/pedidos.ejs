@@ -1,0 +1,71 @@
+<%- layout('layouts/app') %>
+
+    <body background="img/pann.jpg">
+        <section class="pedidos">
+            <h2><b> Realizar Pedido</b>
+            </h2>
+            <br/>
+            <form action="/registrarPedidos" method="POST">
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="Ingrese su Nombre" aria-label="Usuario" aria-describedby="basic-addon1" name="nombre">
+                </div>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="Ingrese su Apellido" aria-label="Apellido" aria-describedby="basic-addon1" name="apellido">
+                </div>
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="Numero de telefono" aria-label="Phone" aria-describedby="basic-addon1" name="telefono">
+                </div>
+
+                <select class="form-select form-select-lg mb-3" id="inlineFormCustomSelect" name="productos">
+                                
+                <option selected>Productos</option>
+                  <option value="Pastel">Pastel</option>
+                  <option value="Cupcakes">Cupcakes</option>
+                  <option value="Cakepops">Cakepops</option>
+                  <option value="Galletas">Galletas</option>
+                  <option value="Pays">Pays</option>
+                  <option value="Brownies">Brownies</option>
+                </select>
+
+
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="Descripcion de pedido:" aria-label="Descripcion" aria-describedby="basic-addon1" name="descripcion">
+                </div>
+
+
+                <div class="input-group mb-3">
+
+                    <input type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad" aria-describedby="basic-addon1" name="cantidad">
+                </div>
+
+
+                <div class="input-group mb-3">
+
+
+
+                    <input type="date" value="2021-12-13" class="form-control" placeholder="Fecha de entrega" aria-label="Cantidad" aria-describedby="basic-addon1" name="fecha">
+
+                </div>
+
+                <div class="input-group mb-3">
+
+
+
+                    <input type="text" name="hora" class="form-control" placeholder="hora" aria-label="Cantidad" aria-describedby="basic-addon1">
+
+                </div>
+
+                <div>
+
+                    <button type="submit" class="btn btn-success ms-lg-3">Agendar</button>
+                    <a class="btn btn-danger ms-lg-3" href="/servicios ">Cancelar</a>
+                </div>
+            </form>
+        </section>
+
+
+    </body>

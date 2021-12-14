@@ -1,0 +1,31 @@
+<%- layout('layouts/app') %>
+
+    <body background="img/fondo6.jpg">
+        <section class="form-register">
+            <h3> <b>Curso de Pays </b></h3>
+            <form action="/registrarCursoPay" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-alt"></i></span>
+                    <input type="text" class="form-control" placeholder="Ingrese su Nombre" aria-label="Usuario" aria-describedby="basic-addon1" name="nombre">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></i></span>
+                    <input type="text" class="form-control" placeholder="Ingrese su Apellido" aria-label="Apellido" aria-describedby="basic-addon1" name="apellido">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                    <input type="text" class="form-control" placeholder="Ingrese su Correo" aria-label="Correo" aria-describedby="basic-addon1" name="correo">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone-alt"></i></span>
+                    <input type="text" class="form-control" placeholder="Ingrese su Telefono" aria-label="Telefono" aria-describedby="basic-addon1" name="telefono">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success ms-lg-3">Registrar</button>
+                    <a type="submit" class="btn btn-danger ms-lg-3" href="/cursos ">Cancel</a>
+                </div>
+            </form>
+        </section>
+
+
+    </body>
